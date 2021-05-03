@@ -56,3 +56,5 @@ while True:
     lcd.printout("          ")
     lcd.setCursor(0,1)
     lcd.printout(count)
+
+    
