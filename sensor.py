@@ -51,12 +51,6 @@ def read_temp():
         temp_c = float(temp_string)/1000.0 
         temp_f = temp_c * (9.0 / 5.0) + 32.0
         return temp_c, temp_f
-    
-    
-    if temp_c < 30:
-        lcd.setCursor(0,0)
-        lcd.printout("TOO HOT!")
-        time.sleep(0.1) 
             
  
 print(' ROM: '+ rom)
@@ -69,5 +63,23 @@ while True:
     lcd.setCursor(0,0)
     lcd.printout("current temp:")
     lcd.setCursor(0,1)
-    lcd.printout('{:,.3f} C'.format(c, f))
-    time.sleep(0.1) 
+    lcd.printout('{:,.3f} C       '.format(c, f))
+    time.sleep(0.1)
+    
+    # set the value to 70C 
+    if c > 30:
+        lcd.setCursor(0,0)
+        lcd.printout("TOO HOT!     ")
+        lcd.setCursor(0,1)
+        lcd.printout("keep under 30 C ")
+        time.sleep(3)
+
+    # set the value to 60 C 
+    if c < 20:
+        lcd.setCursor(0,0)
+        lcd.printout("TOO COLD!     ")
+        lcd.setCursor(0,1)
+        lcd.printout("keep above 20 C ")
+        time.sleep(3)
+    
+    
