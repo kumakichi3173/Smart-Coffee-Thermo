@@ -1,6 +1,28 @@
+# import all libraries needed
+import sys
+sys.path.append('../')
+import RPi.GPIO as GPIO
+import rgb1602
+import time
+
+lcd = rgb1602.RGB1602(16,2)
+GPIO.setmode(GPIO.BCM)
+
 import os
 import glob
 import time
+
+# Define keys
+lcd_key     = 0
+key_in  = 0
+
+GPIO.setup(17, GPIO.IN)
+GPIO.setup(18, GPIO.IN)
+
+# Read the key value
+def read_LCD_buttons():
+  key_in17 = GPIO.input(17)
+  key_in18 = GPIO.input(18)
 
 #these tow lines mount the device:
 os.system('modprobe w1-gpio')
@@ -24,16 +46,28 @@ def read_temp():
 
     pos = temp.index('t=')
     if pos != -1:
-        #read the temperature .
+        #read the temperature .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         temp_string = temp[pos+2:]
         temp_c = float(temp_string)/1000.0 
         temp_f = temp_c * (9.0 / 5.0) + 32.0
         return temp_c, temp_f
+    
+    
+    if temp_c < 30:
+        lcd.setCursor(0,0)
+        lcd.printout("TOO HOT!")
+        time.sleep(0.1) 
+            
  
 print(' ROM: '+ rom)
 
 while True:
     c, f = read_temp()
     print('C={:,.3f} F={:,.3f}'.format(c, f))
-    time.sleep(1)
-
+    7
+    # Setup LCD display
+    lcd.setCursor(0,0)
+    lcd.printout("current temp:")
+    lcd.setCursor(0,1)
+    lcd.printout('{:,.3f} C'.format(c, f))
+    time.sleep(0.1) 
