@@ -66,19 +66,19 @@ while True:
     time.sleep(0.1)
     
     # set the value to 70C 
-    if c > 30:
+    if c > 70:
         lcd.setCursor(0,0)
         lcd.printout("TOO HOT!     ")
         lcd.setCursor(0,1)
-        lcd.printout("keep under 30 C ")
+        lcd.printout("keep under 70 C ")
         time.sleep(3)
 
     # set the value to 60 C 
-    if c < 20:
+    if c < 60:
         lcd.setCursor(0,0)
         lcd.printout("TOO COLD!     ")
         lcd.setCursor(0,1)
-        lcd.printout("keep above 20 C ")
+        lcd.printout("keep above 60 C ")
         time.sleep(3)
     
     
