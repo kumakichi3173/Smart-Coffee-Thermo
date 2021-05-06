@@ -13,7 +13,7 @@ import glob
 import time
 
 # Define keys
-lcd_key     = 0
+lcd_key  = 0
 key_in  = 0
 
 GPIO.setup(17, GPIO.IN)
