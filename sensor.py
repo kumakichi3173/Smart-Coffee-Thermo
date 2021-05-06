@@ -58,7 +58,7 @@ print(' ROM: '+ rom)
 while True:
     c, f = read_temp()
     print('C={:,.3f} F={:,.3f}'.format(c, f))
-    7
+    
     # Setup LCD display
     lcd.setCursor(0,0)
     lcd.printout("current temp:")
