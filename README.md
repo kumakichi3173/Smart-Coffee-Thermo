@@ -6,9 +6,13 @@ Concept:  My idea is to create a sort of heat detection device that will notify 
 
 Materials:
 ● Temperature Sensors Module Kit with Waterproof Stainless Steel Probe (DS18B20 temperatire sensor)
+
 ● Double Sided PCB Board Prototype Kit
+
 ● DC 5V 3A Power Supply Adapter Converter
+
 ● Monitor for Raspberry Pi 4
+
 ● Cable for the monitor
 ● Raspberry Pi 4
 ● SD Card for Raspberry Pi 4
