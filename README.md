@@ -28,3 +28,6 @@ Designed a heat detection device that notifies users when food or beverages reac
 * Monitor
 * Keyboard
 * Necessary wires
+## Videos
+[![TOO HOT! ALERT](https://img.youtube.com/vi/59UQxnFOTeE/0.jpg)](https://www.youtube.com/watch?v=59UQxnFOTeE)
+[![TOO COLD! ALERT](https://img.youtube.com/vi/8uN98_YkFpA/0.jpg)](https://www.youtube.com/watch?v=8uN98_YkFpA)
